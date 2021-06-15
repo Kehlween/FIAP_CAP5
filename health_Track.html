@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilo_dash.css">
+    <title>Dashboard</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav_icon" onclick="toggleSidebar()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="navbar__left">
+                    <a href="#">Consumo diário</a>
+                    <a href="./dash.html">Relatório Geral</a>
+                    <a href="#">Anotações</a>
+                    <a class="active_link" href="#">Dashboard</a>
+                </div>
+                <div class="navbar__right">
+                    <a href="#">
+                        <i class="fa fa-search"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-clock-o"></i>
+                    </a>
+                    <a href="#">
+                        <img width="30" src="./img_dash/avatar.png" alt="" />
+                    </a>
+                </div>
+            </nav>
+
+            <main>
+                <div class="main__container">
+                    <div class="main__title">
+                        <img src="./img_dash/kehl.png" alt="">
+                        <div class="main__greeting">
+                            <h1>Bem vindo!</h1>
+                            <p>Status gerais da sua saúde</p>
+                        </div>
+                    </div>
+                    <div class="main__cards">
+
+                        <div class="card">
+                            <i class="fa fa-user fa-2x"></i>
+                            <div class="card__inner">
+                                <p class="text-primary-p">Peso atual (kg)</p>
+                                <span class="font-bold text-title">74</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <i class="fa fa-th fa-2x text-red"></i>
+                            <div class="card__inner">
+                                <p class="text-primary-p">Altura (mts)</p>
+                                <span class="font-bold text-title">1.67</span>
+                        </div>
+                        
+                        </div>
+
+                        <div class="card">
+                            <i class="fa fa-file-text fa-2x text-yellow"></i>
+                            <div class="card__inner">
+                                <p class="text-primary-p">Consumo diário (cal)</p>
+                                <span class="font-bold text-title">2.500</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <i class="fa fa-heart fa-2x text-green"></i>
+                            <div class="card__inner">
+                                <p class="text-primary-p">IMC</p>
+                                <span class="font-bold text-title">28</span>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="charts">
+
+                        <div class="charts__left">
+                            <div class="charts__left__title">
+                                <div>
+                                    <h1>Relatório diário</h1>
+                                    <p>Resumo: Peso, Consumo (cal), Conquistas</p>
+                                </div>                       
+                                <i class="fa fa-paperclip"></i>
+                            </div>
+                            <div id="apex1"></div>
+                        </div>
+
+                        <div class="charts__right">
+                            <div class="charts__right__title">
+                                <div>
+                                    <h1>Status das Metas</h1>
+                                    <p>Acompanhamento</p>
+                                </div>
+                                <i class="fa fa-exchange"></i>
+                            </div>
+
+                            <div class="charts__right__card">
+
+                                <div class="card1">
+                                    <h1>IMC</h1>
+                                    <p>24</p>
+                                </div>
+
+                                <div class="card2">
+                                    <h1>Peso</h1>
+                                    <p>68 Kg</p>
+                                </div>
+
+                                <div class="card3">
+                                    <h1>Consumo diário</h1>
+                                    <p>2.000 cal</p>
+                                </div>
+
+                                <div class="card4">
+                                    <h1>Tempo</h1>
+                                    <p>67 dias</p>
+                                </div>
+                            </div>
+                        </div>          
+                    </div>
+                </div>
+            </main>
+            <div id="sidebar">
+                <div class="sidebar__title">
+                    <div class="sidebar__img">
+                        <img src="./img/android-chrome-192x192.png" alt="">
+                        <a>NUTRITECH</a>
+                    </div>
+                    <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+                </div>
+
+                <div class="sidebar__menu">
+                    <div class="sidebar__link active_menu_link">
+                        <i class="fa fa-home"></i>
+                        <a href="#">Dashboard</a>
+                    </div>
+                    <h2>ADMINISTRAÇÃO</h2>
+                    <div class="sidebar__link">
+                        <i class="fa fa-user"></i>
+                        <a href="#">Perfil</a>
+                    </div>
+                    <div class="sidebar__link">
+                        <i class="fa fa-building-o"></i>
+                        <a href="#">Gerenciamento</a>
+                    </div>
+                    <div class="sidebar__link">
+                        <i class="fa fa-wrench"></i>
+                        <a href="#">Configurações</a>
+                    </div>
+                    <div class="sidebar__link">
+                        <i class="fa fa-archive"></i>
+                        <a href="#">Arquivos</a>
+                    </div>
+                    <div class="sidebar__link">
+                        <i class="fa fa-gears"></i>
+                        <a href="#">Integrações</a>
+                    </div>
+                    <div class="sidebar__link">
+                        <i class="fa fa-question-circle"></i>
+                        <a href="#">Tira dúvidas</a>
+                    </div>
+                    <div class="sidebar__link">
+                        <i class="fa fa-calendar-o"></i>
+                        <a href="#">Calendário</a>
+                    </div>
+                    <div class="sidebar__link">
+                        <i class="fa fa-files-o"></i>
+                        <a href="#">Relatórios</a>
+                    </div>
+                    <h2>SAÍDA</h2>
+                    <div class="sidebar__link">
+                        <i class="fa fa-power-off"></i>
+                        <a href="#">Log out</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Aqui será usado o Apex Charts CDN-->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="./Js/script.js"></script>
+    </body>
+</html>
