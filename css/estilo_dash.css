@@ -361,7 +361,7 @@ main {
 }
 
 .sidebar__title > div > img {
-    width: 75px;
+    width: 50px;
     object-fit: contain;
 }
 
